@@ -229,40 +229,36 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         color: rgb(221, 215, 205);
         font-size: 18px;
         text-decoration: none;
-    }
-}
 
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-}
-.header__link:hover {
-    color: #ff9b51;
+        &:hover {
+            color: #ff9b51;
+        }
+    }
 }
 
 //TRIAL ===========================================================================
 .trial {
-    padding: 140px 0 0 0;
+    min-height: 480px;
+    padding: 140px 0 25px;
     background-color: #9a9a9a;
-    @media (max-width:$md1){
-        padding: 120px 0 0 10px;
+
+    @media (max-width: $md3) {
+        padding: 120px 0 25px;
     }
-    @media (max-width:$md4){
-        padding: 120px 0 0 0;
-    }
-    // .trial__container
-    &__container {
-        margin-top: 70px;
-        min-height: 501px;
-        max-width: 1100px;
-        margin: 0px auto;
-        @media (max-width:$md2){
-            height: 801px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md1) {
+            padding: 0 10px;
+        }
+        @media (max-width: $md2) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
+
     // .trial__img
     &__img {
         display: block;
@@ -275,18 +271,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
     &__header {
         font-family: Raleway;
         font-size: 36px;
-        line-height: 1.2;
         color: #ffffff;
-        margin: 33px 0 0 0;
-        width: 525px;
-    
+        margin-top: 33px;
+        max-width: 525px;
+
         @media (max-width:$md2){
-            margin: 33px auto 0 auto;
-            text-align: center;
             font-size: 24px;
         }
         @media (max-width:$md3){
-            width: 310px;
             font-size: 21px;
         }
     }
@@ -296,7 +288,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         background-color: white;
         height: 2px;
         width: 74px;
-        margin: 36px 0 0 0;
+        margin: 36px 0 0;
+
         @media (max-width:$md2){
             margin: 36px auto 0 auto;
         }
@@ -310,19 +303,15 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         font-weight: 300;
         color: #ffffff;
         margin: 30px 0 0 0;
-        width: 461px;
+        max-width: 461px;
+
         @media (max-width:$md2){
-            margin: 30px auto 0 auto;
-            text-align: center;
-        }
-        @media (max-width:$md4){
-            width: 310px;
+            margin: 30px auto 0;
         }
     }
     // .trial__download
     &__download {
         font-size: 15px;
-        line-height: 1.2;
         font-weight: 600;
         color: #ffffff;
         width: 135px;
@@ -330,33 +319,29 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         border: 2px solid white;
         text-align: center;
         line-height: 41px;
-        margin: 44px 0 0 0;
-
-        @media (max-width:$md2){
-            margin: 44px auto 0 auto;
-        }
+        margin: 44px 0 0;
 
         a {
             color: #fff;
         }
-
         &:hover {
             a {color: #333333;}
             background-color: #cacaca;
         }
-    }
-    // .trial__try
-    &__try {
-        width: 360px;
-        height: 362px;
-        margin-left: auto;
-        margin-right: 22px;
-        margin-top: -372px;
-        @media (max-width:$md2){
-            margin: 30px auto 0 auto;
+
+        @media (max-width: $md2) {
+            margin: 44px auto 0;
         }
-        @media (max-width:$md4){
-            margin: 30px auto 0 auto;
+    }
+    // .trial__form
+    &__form {
+        width: 360px;
+
+        margin: 35px 22px 0 0;
+        @media (max-width: $md2) {
+            margin: 35px 0 0;
+        }
+        @media (max-width: $md3) {
             width: 310px;
         }
     }
@@ -383,28 +368,24 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
     // .trial__reg
     &__reg {
         background-color: white;
-        height: 267px;
-        @media (max-width:$md4){
-            height: 240px;
-        }
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     //.trial__input
     &__input {
-        width: 285px;
+        width: 80%;
         height: 31px;
-        box-shadow: 0px 1px 0px 0px rgba(0,0,1,0.15);
-        margin: 36px 35px 0 35px;
-        align-items: center;
-        @media (max-width:$md4){
-            width: 235px;
-        }
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+        margin: 35px 0 0;
     }
-    //.trial__getStarted
-    &__getStarted {
+    //.trial__submit
+    &__submit {
+        width: 100%;
         background-color: #ff9b51;
         height: 54px;
         font-size: 15px;
-        line-height: 51px;
         font-weight: 600;
         color: #ffffff;
         text-align: center;
