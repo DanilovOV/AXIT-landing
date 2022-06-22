@@ -1,3 +1,5 @@
+const url = 'https://628e4808a339dfef87ab4f4b.mockapi.io/'
+
 // Делаем активным меню при нажатии на бургер
 document.querySelector('.header__burger').addEventListener('click', () => {
     document.querySelector('.header__burger').classList.toggle('active');
@@ -5,7 +7,6 @@ document.querySelector('.header__burger').addEventListener('click', () => {
 })
 
 
-// Табы изображений
 // Скрываем все изображения кроме первого
 let tabsImages = document.querySelectorAll('.tabs__image');
 tabsImages.forEach(element => element.style.display = 'none');
@@ -41,8 +42,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
         const scrollTarget = document.getElementById(href);
 
-        // Высота шапки
-        const topOffset = 70;
+        const topOffset = 70; // Высота шапки
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
         
@@ -52,3 +52,27 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+// Отправка формы в блоке trial
+document.querySelector('.trial__submitButton').onclick = trialFormClick;
+function trialFormClick(e) {
+    e.preventDefault();
+    let userData = {
+        name: document.getElementById('trial-text').value,
+        email: document.getElementById('trial-email').value,
+        password: document.getElementById('trial-password').value,
+    };
+
+    fetch(url + 'AXIT-trial-requests', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => {
+        if (!response.ok) throw new Error(response)
+    })
+    .then(() => alert('Success!'))
+    .catch(() => alert('Error'))
+}
