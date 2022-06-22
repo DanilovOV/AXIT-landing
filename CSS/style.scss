@@ -62,8 +62,12 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         font-size: 28px;
     }
 }
+.fab:hover {
+    color: #ff8b38;
+}
 
-.button {
+button {
+    font-weight: 600;
     transition: all 0.4s;
 }
 
@@ -309,18 +313,15 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
             margin: 30px auto 0;
         }
     }
-    // .trial__download
-    &__download {
-        font-size: 15px;
-        font-weight: 600;
-        color: #ffffff;
+    // .trial__downloadButton
+    &__downloadButton {
         width: 135px;
         height: 45px;
         border: 2px solid white;
-        text-align: center;
-        line-height: 41px;
         margin: 44px 0 0;
-
+        font-size: 15px;
+        background-color: inherit;
+        color: #ffffff;
         a {
             color: #fff;
         }
@@ -328,7 +329,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
             a {color: #333333;}
             background-color: #cacaca;
         }
-
         @media (max-width: $md2) {
             margin: 44px auto 0;
         }
@@ -380,15 +380,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         border-bottom: 1px solid rgba(0,0,0,0.15);
         margin: 35px 0 0;
     }
-    //.trial__submit
-    &__submit {
+    //.trial__submitButton
+    &__submitButton {
         width: 100%;
-        background-color: #ff9b51;
         height: 54px;
         font-size: 15px;
-        font-weight: 600;
+        background-color: #ff9b51;
         color: #ffffff;
-        text-align: center;
+        
         &:hover {
             background-color: #ffb47b;
         }
@@ -556,7 +555,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
     &__button {
         font-size: 15px;
         line-height: 42px;
-        font-weight: 600;
         color: #ffffff;
         background-color: #ff8b38;
         width: 121px;
@@ -1066,7 +1064,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
     &__download {
         font-size: 15px;
         line-height: 1.2;
-        font-weight: 600;
         color: #ffffff;
         width: 135px;
         height: 45px;
@@ -1074,6 +1071,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         text-align: center;
         line-height: 41px;
         margin: 33px auto 0;
+
         &:hover {
             a {color: #333333;}
             background-color: #cacaca;
@@ -1154,10 +1152,10 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         background-color: #ff9b51;
         font-size: 15px;
         line-height: 40px;
-        font-weight: 600;
         color: #ffffff;
         margin: 44px auto 0 auto;
         border-radius: 4px;
+
         &:hover{
             background-color: #ffa560;
             box-shadow: 0 0 5px black;
@@ -1192,7 +1190,4 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
         color: #ffffff;
         text-align: center;
     }
-}
-.fab:hover {
-    color: #ff8b38;
 }
