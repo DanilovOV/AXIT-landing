@@ -67,7 +67,7 @@
                             <input type="password" id="trial-password" placeholder="Password" class="trial__input" />
                         </div>
                         <button type="submit" class="trial__submitButton">Get Started</button>
-                    </fo>
+                    </form>
                 </div>
             </div>
 
@@ -412,19 +412,19 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </div>
                     </div>
-                    <div class="contact__box">
-                        <div class="contact__data">
-                            <input placeholder="Name" class="contact__input" />
-                            <input placeholder="Email" class="contact__input" />
-                            <input placeholder="Subject" class="contact__input" />
+                    <form method="post" class="contact__form">
+                        <div class="contact__box">
+                            <div class="contact__data">
+                                <input id="contact-name" placeholder="Name" class="contact__input" />
+                                <input id="contact-email" placeholder="Email" class="contact__input" />
+                                <input id="contact-subject" placeholder="Subject" class="contact__input" />
+                            </div>
+                            <div class="contact__data">
+                                <textarea  id="contact-message" placeholder="Message" class="contact__area"></textarea>
+                            </div>
                         </div>
-                        <div class="contact__data">
-                            <textarea placeholder="Message" class="contact__area"></textarea>
-                        </div>
-                    </div>
-                    <div class="contact__button">
-                        <a href="#" class="link2">Send Message</a>
-                    </div>
+                        <button type="submit" class="contact__button">Send Message</button>
+                    </form>
                 </div>
             </div>
             <footer class="border">

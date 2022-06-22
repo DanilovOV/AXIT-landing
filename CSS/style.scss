@@ -1092,6 +1092,12 @@ button {
         height: 720px;
     }
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     // .contact__box
     &__box {
         display: flex;
