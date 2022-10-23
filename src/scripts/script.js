@@ -1,10 +1,9 @@
-const url = 'https://628e4808a339dfef87ab4f4b.mockapi.io/'
-
 // Делаем активным меню при нажатии на бургер
 document.querySelector('.header__burger').addEventListener('click', () => {
     document.querySelector('.header__burger').classList.toggle('active');
     document.querySelector('.header__menu').classList.toggle('active');
 })
+
 
 
 // Скрываем все изображения кроме первого
@@ -33,6 +32,7 @@ function ChangeTab() {
 }
 
 
+
 // Плавный скролл при нажатии на ссылку
 document.querySelectorAll('a[href^="#"').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -52,6 +52,10 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+
+
+const url = 'https://628e4808a339dfef87ab4f4b.mockapi.io/'
 
 // Отправка формы в блоке trial
 document.querySelector('.trial__submitButton').onclick = trialFormSubmit;
