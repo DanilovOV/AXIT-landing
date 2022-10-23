@@ -33,8 +33,8 @@ const paths = {
     dest: 'dist/js/'
   },
   images: {
-    src: 'src/img/**',
-    dest: 'dist/img/'
+    src: 'src/images/**',
+    dest: 'dist/images/'
   }
 }
 
