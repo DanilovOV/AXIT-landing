@@ -1,18 +1,18 @@
 // Делаем активным меню при нажатии на бургер
-document.querySelector('.header__burger').addEventListener('click', () => {
-    document.querySelector('.header__burger').classList.toggle('active');
-    document.querySelector('.header__menu').classList.toggle('active');
+document.querySelector('.js-header-burger').addEventListener('click', () => {
+    document.querySelector('.js-header-burger').classList.toggle('active');
+    document.querySelector('.js-header-menu').classList.toggle('active');
 })
 
 
 
 // Скрываем все изображения кроме первого
-let tabsImages = document.querySelectorAll('.tabs__image');
+let tabsImages = document.querySelectorAll('.js-tab-image');
 tabsImages.forEach(element => element.style.display = 'none');
 tabsImages[0].style.display = 'block';
 
 // Навешиваем обработчики на табы
-let tabButtons = document.querySelectorAll('.tabs__tabButton');
+let tabButtons = document.querySelectorAll('.js-tab-button');
 tabButtons.forEach(element => element.addEventListener('click', ChangeTab));
 let animateOn = false;
 
@@ -26,7 +26,7 @@ function ChangeTab() {
 
     // Анимация добавляется здесь чтобы она не срабатывала при загрузке страницы
     if(animateOn == false){
-        document.querySelectorAll('.tabs__image').forEach(element => element.classList.add('animated'));
+        document.querySelectorAll('.js-tab-image').forEach(element => element.classList.add('animated'));
         animateOn = true;
     }
 }
@@ -58,7 +58,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 const url = 'https://628e4808a339dfef87ab4f4b.mockapi.io/'
 
 // Отправка формы в блоке trial
-document.querySelector('.trial__submitButton').onclick = trialFormSubmit;
+document.querySelector('.js-trial-submit').onclick = trialFormSubmit;
 function trialFormSubmit(e) {
     e.preventDefault();
     let userData = {
@@ -82,7 +82,7 @@ function trialFormSubmit(e) {
 }
 
 // Отправка данных формы в блоке Contact
-document.querySelector('.contact__button').onclick = contactFormSubmit;
+document.querySelector('.js-send-message').onclick = contactFormSubmit;
 function contactFormSubmit(e) {
     e.preventDefault();
     let userData = {
