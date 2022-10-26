@@ -73,10 +73,15 @@ button {
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
         gap: 20px;
         flex-wrap: wrap;
-    }
 
+        @media (max-width:768px) {
+            justify-content: center;
+            gap: 60px;
+        }
+    }
 
     // .trial__header
     &__header {
@@ -86,7 +91,6 @@ button {
         font-family: $ffr;
         font-size: 36px;
         
-
         @media (max-width:768px) {
             font-size: 21px;
         }
@@ -96,54 +100,44 @@ button {
     &__stick {
         content: '';
         background-color: white;
-        height: 2px;
         width: 74px;
+        height: 2px;
         margin: 36px 0;
     }
 
     // .trial__text
     &__text {
+        max-width: 461px;
+        color: #fff;
         opacity: 0.8;
         font-family: 'Raleway';
         font-size: 16px;
-        line-height: 23px;
         font-weight: 300;
-        color: #fff;
-        max-width: 461px;
+
+        @media (max-width:768px) {
+            justify-content: center;
+            gap: 60px;
+        }
     }
 
     // .trial__download
     &__download {
         margin-top: 44px;
         padding: 12px 30px;
-        background-color: inherit;
         color: #fff;
-        border: 2px solid currentColor;
+        background-color: inherit;
+        border: 2px solid #fff;
         font-size: 15px;
 
         &:hover {
+            color: #333;
             background-color: #cacaca;
-
-            a {
-                color: #333;
-            }
-        }
-
-        a {
-            color: #fff;
         }
     }
 
     // .trial__form
     &__form {
         margin-top: 35px;
-    }
-
-    // .trial__link
-    &__link {
-        display: block;
-        color: #fff;
-        text-decoration: none;
     }
 }
 
