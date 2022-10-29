@@ -272,17 +272,17 @@ button {
 
     // .tabs__title
     &__title {
+        padding-bottom: 52px;
+        color: $grey-900;
         font-size: 20px;
         font-weight: 700;
-        color: $grey-900;
-        padding-bottom: 52px;
     }
 
     // .tabs__text
     &__text {
-        font-size: 14px;
-        line-height: 20px;
         color: $grey-400;
+        font-size: 14px;
+        line-height: 1.5;
 
         p {
             padding-bottom: 18px;
@@ -291,18 +291,19 @@ button {
 
     // .tabs__button
     &__button {
-        font-size: 15px;
-        line-height: 42px;
-        color: $white;
-        background-color: $orange-400;
-        width: 121px;
         height: 46px;
-        text-align: center;
+        margin-top: 40px;
+        padding: 10px 25px;
+        background: $orange-400;
         border-radius: 4px;
-        margin: 40px 0 0 0;
+        color: $white;
+        font-size: 15px;
+        text-align: center;
+        transition: all .3s ease;
 
         &:hover {
-            box-shadow: 0 0 5px $grey-900;
+            background: $orange-300;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
         }
     }
 
@@ -324,7 +325,6 @@ button {
     // .tabs__image
     &__image {
         width: 100%;
-        object-fit: cover;
     }
 }
 
