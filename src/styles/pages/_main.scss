@@ -4,8 +4,8 @@
 
 .title {
     padding-top: 108px;
-    color: #212121;
-    font: 36px/43px 'Raleway', sans-serif;
+    color: $grey-900;
+    font: 36px/43px $ffr;
     
     @media (max-width:1024px) {
         padding: 40px 0 0 0;
@@ -17,12 +17,12 @@
 }
 
 .fab:hover {
-    color: #ff8b38;
+    color: $orange-400;
 }
 
 button {
     font-weight: 600;
-    transition: all 0.4s;
+    transition: all 0.3s;
 }
 
 .link {
@@ -32,7 +32,7 @@ button {
 }
 
 .link2 {
-    color: white;
+    color: $white;
     text-decoration: none;
     display: block;
     height: 100;
@@ -40,7 +40,7 @@ button {
 
 .link-sn-border {
     text-decoration: none;
-    color: white;
+    color: $white;
 }
 
 .animated {
@@ -58,7 +58,7 @@ button {
 
 .trial {
     padding: 130px 0 35px;
-    background-color: #9a9a9a;
+    background-color: $grey-300;
 
     @media (max-width: 768px) {
         padding: 120px 0 25px;
@@ -87,7 +87,7 @@ button {
     &__header {
         max-width: 525px;
         margin-top: 33px;
-        color: #fff;
+        color: $white;
         font-family: $ffr;
         font-size: 36px;
         
@@ -99,7 +99,7 @@ button {
     // .trial__stick
     &__stick {
         content: '';
-        background-color: white;
+        background-color: $white;
         width: 74px;
         height: 2px;
         margin: 36px 0;
@@ -108,9 +108,9 @@ button {
     // .trial__text
     &__text {
         max-width: 461px;
-        color: #fff;
+        color: $white;
         opacity: 0.8;
-        font-family: 'Raleway';
+        font-family: $ffr;
         font-size: 16px;
         font-weight: 300;
 
@@ -124,14 +124,14 @@ button {
     &__download {
         margin-top: 44px;
         padding: 12px 30px;
-        color: #fff;
+        color: $white;
         background-color: inherit;
-        border: 2px solid #fff;
+        border: 2px solid $white;
         font-size: 15px;
 
         &:hover {
-            color: #333;
-            background-color: #cacaca;
+            color: $grey-700;
+            background-color: $grey-200;
         }
     }
 
@@ -144,96 +144,64 @@ button {
 
 
 .social {
-    background-color: white;
+    background-color: $white;
     margin-right: 5px;
     
-    // .social__block
-    &__block {
+    // .social__inner
+    &__inner {
         display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin: 22px 0 30px;
 
         @media (max-width:768px) {
             flex-direction: column;
-            align-items: center;
         }
     }
 
-    // .social__text
-    &__text {
-        width: 50%;
-        margin: 22px 0 30px 0;
+    // .social__info
+    &__info {
+        max-width: 375px;
 
-        @media (max-width:1120px) {
-            margin: 22px 0 30px 15px;
-        }
-        
         @media (max-width:768px) {
-            width: 70%;
-            margin: 22px 0 0 0;
-        }
-
-        @media (max-width:475px) {
-            width: 90%;
+            max-width: 100%;
         }
     }
 
     // .social__title
     &__title {
-        width: 375px;
+        color: $grey-700;
         font-size: 20px;
-        line-height: 1.2;
         font-weight: 700;
-        color: #333333;
-
-        @media (max-width:475px) {
-            width: 90%;
-        }
     }
 
-    // .social__subtitle
-    &__subtitle {
-        width: 375px;
-        margin: 12px 0 0 0;
+    // .social__text
+    &__text {
+        margin-top: 12px;
+        color: $grey-400;
         font-size: 14px;
-        line-height: 20px;
-        color: #86878b;
-
-        @media (max-width:475px) {
-            width: 90%;
-        }
+        line-height: 1.5;
     }
     
     // .social__links
     &__links {
-        width: 50%;
         display: flex;
-        justify-content:space-around;
         align-items: center;
+        gap: 40px;
         font-family: 'Font Awesome';
         font-size: 48px;
-        line-height: 1.2;
-        color: #cccccc;
-
-        @media (max-width:1120px) {
-            font-size: 38px;
-        }
-
-        @media (max-width:1024px) {
-            justify-content:space-between;
-            align-items: center;
-            margin: 10px 0;
-        }
+        color: $grey-200;
 
         @media (max-width:768px) {
-            width: 70%;
+            justify-content: space-between;
+            gap: 0;
+            width: 80%;
+            font-size: 40px;
         }
 
         @media (max-width:475px) {
-            width: 90%;
-            font-size: 26px;
-        }
-
-        a {
-            color: #a8a8a8;
+           width: 100%;
+           font-size: 35px;
         }
     }
 }
@@ -241,7 +209,7 @@ button {
 
 
 .tabs {
-    background-color: #f5f5f5;
+    background-color: $grey-100;
     height: 600px;
 
     @media (max-width:1024px) {
@@ -270,7 +238,7 @@ button {
         line-height: 119px;
         font-size: 15px;
         font-weight: 700;
-        color: #ffffff;
+        color: $white;
     
         @media (max-width:1120px) {
             margin: 15px 0 0 15px;
@@ -304,7 +272,7 @@ button {
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
-        color: #000000;
+        color: $grey-900;
         padding: 0 0 52px 0;
 
         @media (max-width:475px) {
@@ -316,7 +284,7 @@ button {
     &__text {
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
         p {
             padding: 0 0 18px 0;
         }
@@ -326,8 +294,8 @@ button {
     &__button {
         font-size: 15px;
         line-height: 42px;
-        color: #ffffff;
-        background-color: #ff8b38;
+        color: $white;
+        background-color: $orange-400;
         width: 121px;
         height: 46px;
         text-align: center;
@@ -335,7 +303,7 @@ button {
         margin: 40px 0 0 0;
 
         &:hover {
-            box-shadow: 0 0 5px black;
+            box-shadow: 0 0 5px $grey-900;
         }
     }
 
@@ -368,8 +336,8 @@ button {
         cursor: pointer;
         width: 112px;
         height: 112px;
-        background-color: #333333;
-        border-bottom: 1px solid #f5f5f5;
+        background-color: $grey-700;
+        border-bottom: 1px solid $grey-100;
     
         &:first-child {
             border-top-left-radius: 4px;
@@ -384,16 +352,16 @@ button {
 
         &:hover {
             transition: all 0.2s;
-            box-shadow: 0 0 10px black;
+            box-shadow: 0 0 10px $grey-900;
         }
     }
 }
 
 .activeTab {
-    background-color: #ff8b38;
+    background-color: $orange-400;
 
     &:hover {
-        box-shadow: 0 0 0px black;
+        box-shadow: 0 0 0px $grey-900;
     }
 }
 
@@ -455,14 +423,14 @@ button {
         font-size: 20px;
         line-height: 43px;
         font-weight: 700;
-        color: #212121;
+        color: $grey-900;
     }
 
     // .section__text
     &__text {
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
 
         p {
             padding: 10px 0;
@@ -475,7 +443,7 @@ button {
         height: 280px;
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
 
         @media (max-width:475px) {
             width: 310px;
@@ -487,7 +455,7 @@ button {
         font-size: 14px;
         line-height: 17px;
         font-weight: 600;
-        color: #212121;
+        color: $grey-900;
         padding: 33px 0 12px 0;
     }
 
@@ -508,10 +476,10 @@ button {
         font-family: 'Font Awesome';
         font-size: 16px;
         line-height: 1.2;
-        color: #ff8b38;
+        color: $orange-400;
         width: 40px;
         height: 40px;
-        border: 1px solid #ff8b38;
+        border: 1px solid $orange-400;
         border-radius: 50%;
         margin: 0 0 0 5px;
         flex-shrink: 0;
@@ -522,7 +490,7 @@ button {
         width: 390px;
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
 
         @media (max-width:475px) {
             width: 300px;
@@ -534,7 +502,7 @@ button {
 
 
 .section2 {
-    background-color: #f5f5f5;
+    background-color: $grey-100;
     height: 524px;
 
     @media (max-width:1024px) {
@@ -578,7 +546,7 @@ button {
     &__headerText {
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
     }
 
     // .awesome__reasons
@@ -606,7 +574,7 @@ button {
         font-family: 'Font Awesome';
         font-size: 32px;
         line-height: 1.2;
-        color: #ff8b38;
+        color: $orange-400;
         margin: -52px 0 0 0;
     }
 
@@ -615,7 +583,7 @@ button {
         font-size: 20px;
         line-height: 24px;
         font-weight: 700;
-        color: #333333;
+        color: $grey-700;
         margin: 25px 0;
     }
 
@@ -624,7 +592,7 @@ button {
         max-width: 360px;
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
         padding: 0 5px;
         
         @media (max-width:475px){
@@ -637,7 +605,7 @@ button {
 
 .pricing {
     height: 800px;
-    background-color: #f5f5f5;
+    background-color: $grey-100;
 
     @media (max-width:768px) {
         height: 1750px;
@@ -646,17 +614,17 @@ button {
     // .pricing__header
     &__header {
         padding: 40px 0 0 0;
-        font-family: Raleway;
+        font-family: $ffr;
         font-size: 28px;
         line-height: 43px;
-        color: #212121;
+        color: $grey-900;
     }
 
     // .pricing__headerText
     &__headerText {
         font-size: 14px;
         line-height: 20px;
-        color: #86878b;
+        color: $grey-400;
     }
 
     // .pricing__columns
@@ -695,8 +663,8 @@ button {
         font-size: 20px;
         line-height: 24px;
         font-weight: 700;
-        color: #ffffff;
-        background-color: #333333;
+        color: $white;
+        background-color: $grey-700;
     }
 
     // .pricing__columnPlan
@@ -707,29 +675,31 @@ button {
         font-size: 20px;
         line-height: 24px;
         font-weight: 700;
-        color: #ffffff;
-        border-bottom: 1px solid white;
+        color: $white;
+        border-bottom: 1px solid $white;
         height: 59px;
     }
 
     // .pricing__columnCost
     &__columnCost {
-        font-family: Raleway;
+        font-family: $ffr;
         font-size: 35px;
         line-height: 24px;
         font-weight: 700;
-        color: #ffffff;
-        span {
-            font-size: 94px;
-        }
-        p {
-            padding: 46px 0 0 0;
-        }
+        color: $white;
         height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 0 17px 0;
+
+        span {
+            font-size: 94px;
+        }
+
+        p {
+            padding: 46px 0 0 0;
+        }
     }
 
     // .pricing__columnTime
@@ -739,14 +709,14 @@ button {
         line-height: 24px;
         font-weight: 600;
         font-style: italic;
-        color: #ffffff;
+        color: $white;
         padding: 0 0 21px 0;
     }
 
     // .pricing__columnString
     &__columnString {
         height: 5px;
-        background-color: #ff8b38;
+        background-color: $orange-400;
     }
 
     // .pricing__columnLists
@@ -754,32 +724,32 @@ button {
         font-size: 14px;
         line-height: 24px;
         text-transform: uppercase;
-        color: #86878b;
-        background-color: white;
+        color: $grey-400;
+        background-color: $white;
     }
 
     // .pricing__column2String
     &__column2String {
         display: flex;
         height: 40px;
-        background-color: #ff8b38;
+        background-color: $orange-400;
         justify-content: center;
         align-items: center;
         font-size: 14px;
         line-height: 24px;
         font-weight: 700;
-        color: #ffffff;
+        color: $white;
     }
 
     // .pricing__columnList
     &__columnList {
-        background-color: white;
+        background-color: $white;
 
         li {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid #f5f5f5;
+            border-bottom: 1px solid $grey-100;
             height: 40px;
         }
     }
@@ -837,7 +807,7 @@ button {
         font-size: 14px;
         line-height: 1.2;
         font-style: italic;
-        color: #86878b;
+        color: $grey-400;
         margin-top: -125px;
         padding: 0 10px;
 
@@ -873,7 +843,7 @@ button {
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
-        color: #333333;
+        color: $grey-700;
         padding: 0 0 5px 0;
     }
 
@@ -881,7 +851,7 @@ button {
     &__job {
         font-size: 14px;
         line-height: 1.2;
-        color: #86878b;
+        color: $grey-400;
     }
 }
 
@@ -889,7 +859,7 @@ button {
 
 .stylish {
     height: 300px;
-    background-color: #9a9a9a;
+    background-color: $grey-300;
 
     @media (max-width:475px) {
         height: 340px;
@@ -898,19 +868,19 @@ button {
     // .stylish__header
     &__header {
         padding: 40px 0 0 0;
-        font-family: Raleway;
+        font-family: $ffr;
         line-height: 1.2;
-        color: #ffffff;
+        color: $white;
     }
 
     // .stylish__headerText
     &__headerText {
         opacity: 0.8;
-        font-family: Raleway;
+        font-family: $ffr;
         font-size: 16px;
         line-height: 1.2;
         font-weight: 300;
-        color: #ffffff;
+        color: $white;
 
         @media (max-width:768px) {
             padding: 0 5px;
@@ -921,19 +891,19 @@ button {
     &__download {
         font-size: 15px;
         line-height: 1.2;
-        color: #ffffff;
+        color: $white;
         width: 135px;
         height: 45px;
-        border: 2px solid white;
+        border: 2px solid $white;
         text-align: center;
         line-height: 41px;
         margin: 33px auto 0;
 
         &:hover {
-            background-color: #cacaca;
+            background-color: $grey-200;
 
             a {
-                color: #333333;
+                color: $grey-700;
             }
         }
     }
@@ -992,8 +962,8 @@ button {
         height: 31px;
         font-size: 14px;
         line-height: 1.2;
-        color: #7c7c7c;
-        border-bottom: 1px solid #bdbdbd ;
+        color: $grey-400;
+        border-bottom: 1px solid $grey-200;
         margin: 0 0 30px 0;
 
         @media (max-width:565px) {
@@ -1011,10 +981,10 @@ button {
         resize: none;
         width: 527px;
         height: 155px;
-        border-bottom: 1px solid #bdbdbd ;
+        border-bottom: 1px solid $grey-200;
         font-size: 14px;
         line-height: 1.2;
-        color: #7c7c7c;
+        color: $grey-400;
 
         @media (max-width:565px) {
             width: 427px;
@@ -1030,16 +1000,16 @@ button {
         width: 148px;
         height: 46px;
         text-align: center;
-        background-color: #ff9b51;
+        background-color: $orange-300;
         font-size: 15px;
         line-height: 40px;
-        color: #ffffff;
+        color: $white;
         margin: 44px auto 0 auto;
         border-radius: 4px;
 
         &:hover{
-            background-color: #ffa560;
-            box-shadow: 0 0 5px black;
+            background-color: $orange-300;
+            box-shadow: 0 0 5px $grey-900;
         }
     }
 }

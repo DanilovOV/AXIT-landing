@@ -1,5 +1,5 @@
 .footer {
-    background-color: #000;
+    background-color: $grey-900;
 
     // .footer__links
     &__links {
@@ -8,7 +8,7 @@
         gap: 8%;
         padding: 15px 0;
         font-size: 24px;
-        color: #ccc;
+        color: $grey-200;
     }
     
     // .footer__copyright
@@ -16,7 +16,7 @@
         padding: 10px 0;
         opacity: 0.5;
         font-size: 13px;
-        color: #fff;
+        color: $white;
         text-align: center;
     }
 }

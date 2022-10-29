@@ -9,8 +9,8 @@
     // .trial-form__title
     &__title {
         padding: 18px 0;
-        color: #333;
-        background-color: #f5f5f5;
+        color: $grey-700;
+        background-color: $grey-100;
         font-size: 20px;
         font-weight: 700;
         text-align: center;
@@ -21,7 +21,7 @@
         }
 
         span {
-            color: #ff8b38;
+            color: $orange-400;
         }
     }
 
@@ -32,7 +32,7 @@
         align-items: center;
         gap: 30px;
         padding: 35px 40px 40px;
-        background-color: #fff;
+        background-color: $white;
 
         @media (max-width:475px) {
             padding: 10px 20px 20px;
@@ -51,11 +51,11 @@
         width: 100%;
         padding: 18px 0;
         font-size: 15px;
-        background-color: #ff9b51;
-        color: #fff;
+        background-color: $orange-300;
+        color: $white;
         
         &:hover {
-            background-color: #ffb47b;
+            background-color: $orange-300;
         }
     }
 }
