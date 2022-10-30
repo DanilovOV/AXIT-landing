@@ -10,7 +10,6 @@ const concat = require('gulp-concat')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 const imagemin = require('gulp-imagemin')
-const htmlmin = require('gulp-htmlmin')
 const size = require('gulp-size')
 const newer = require('gulp-newer')
 const browsersync = require('browser-sync').create()
@@ -50,7 +49,6 @@ function clear() {
 // Обработка html
 function html() {
   return gulp.src(paths.html.src)
-  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(size({
     showFiles:true
   }))
