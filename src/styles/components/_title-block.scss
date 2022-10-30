@@ -1,0 +1,28 @@
+.title-block {
+    display: grid;
+    gap: 26px;
+
+    &--center {
+        justify-items: center;
+        font-family: $ffr;
+        text-align: center;
+    }
+
+    // .title-center__title
+    &__title {
+        color: $grey-900;
+        font-size: 36px;
+    
+        @media (max-width:768px) {
+            font-size: 28px;
+        }
+    }
+
+    // .title-center__text
+    &__text {
+        font-size: 16px;
+        color: $grey-400;
+        font-weight: 300;
+        opacity: 0.8;
+    }
+}
