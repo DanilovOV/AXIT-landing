@@ -218,8 +218,11 @@
     
     // .tabs__tabs
     &__tabs {
-        border-radius: 4px;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        background: $grey-100;
+
 
         @media (max-width:550px) {
             display: none;
@@ -233,7 +236,6 @@
         align-items: center;
         height: 112px;
         background-color: $grey-700;
-        border-bottom: 1px solid $grey-100;
         color: $white;
         font-size: 15px;
         font-weight: 700;
@@ -242,6 +244,14 @@
         &:hover {
             transition: all 0.2s;
             box-shadow: 0 0 10px $grey-900;
+        }
+
+        &:first-child {
+            border-radius: 4px 4px 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 4px 4px;
         }
     }
 
@@ -283,11 +293,11 @@
     // .tabs__images
     &__images {
         position: relative;
+        align-self: center;
         max-width: 320px;
 
         @media (max-width:768px) {
             justify-self: center;
-            align-self: center;
         }
 
         @media (max-width:550px) {
@@ -298,6 +308,7 @@
     // .tabs__image
     &__image {
         width: 100%;
+        object-fit: contain;
     }
 }
 
