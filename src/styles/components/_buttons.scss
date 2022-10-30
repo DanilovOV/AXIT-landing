@@ -1,0 +1,29 @@
+.btn {
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .3s ease;
+
+
+    &--grey {
+        background: $grey-300;
+        color: $white;
+        border: 2px solid $white;
+
+        &:hover {
+            color: $grey-700;
+            background-color: $grey-200;
+        }
+    }
+
+    &--orange {
+        background: $orange-400;
+        color: $white;
+        border-radius: 4px;
+
+        &:hover {
+            background: $orange-300;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+        }
+    }
+}

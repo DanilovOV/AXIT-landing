@@ -20,11 +20,6 @@
     color: $orange-400;
 }
 
-button {
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
 .link {
     text-decoration: none;
     display: block;
@@ -123,16 +118,6 @@ button {
     // .trial__download
     &__download {
         margin-top: 44px;
-        padding: 12px 30px;
-        color: $white;
-        background-color: inherit;
-        border: 2px solid $white;
-        font-size: 15px;
-
-        &:hover {
-            color: $grey-700;
-            background-color: $grey-200;
-        }
     }
 
     // .trial__form
@@ -291,20 +276,8 @@ button {
 
     // .tabs__button
     &__button {
-        height: 46px;
-        margin-top: 40px;
+        margin-top: 44px;
         padding: 10px 25px;
-        background: $orange-400;
-        border-radius: 4px;
-        color: $white;
-        font-size: 15px;
-        text-align: center;
-        transition: all .3s ease;
-
-        &:hover {
-            background: $orange-300;
-            box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
-        }
     }
 
     // .tabs__images
@@ -855,27 +828,6 @@ button {
 
         @media (max-width:768px) {
             padding: 0 5px;
-        }
-    }
-
-    // .stylish__download
-    &__download {
-        font-size: 15px;
-        line-height: 1.2;
-        color: $white;
-        width: 135px;
-        height: 45px;
-        border: 2px solid $white;
-        text-align: center;
-        line-height: 41px;
-        margin: 33px auto 0;
-
-        &:hover {
-            background-color: $grey-200;
-
-            a {
-                color: $grey-700;
-            }
         }
     }
 }
