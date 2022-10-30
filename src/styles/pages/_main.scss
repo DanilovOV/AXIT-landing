@@ -1,5 +1,9 @@
-.fab:hover {
-    color: $orange-400;
+.fab {
+    transition: color .3s ease;
+
+    &:hover {
+        color: $orange-400;
+    }
 }
 
 .link {

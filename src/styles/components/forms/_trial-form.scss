@@ -51,9 +51,10 @@
         font-size: 15px;
         background-color: $orange-300;
         color: $white;
+        transition: background .3s ease;
         
         &:hover {
-            background-color: $orange-300;
+            background: $orange-400;
         }
     }
 }
