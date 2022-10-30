@@ -310,75 +310,71 @@
         width: 100%;
         object-fit: contain;
     }
-}
 
-.activeTab {
-    background-color: $orange-400;
-
-    &:hover {
-        box-shadow: 0 0 0px $grey-900;
+    .activeTab {
+        background-color: $orange-400;
+    
+        &:hover {
+            box-shadow: 0 0 0px $grey-900;
+        }
     }
 }
 
 
 
-
-
 .section {
-    padding: 127px 0;
+    padding-top: 127px;
+
+    @media (max-width:768px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width:475px) {
+        padding-top: 40px;
+    }
 
     // .section__inner
     &__inner {
         display: flex;
         justify-content: space-between;
+        gap: 50px;
 
         @media (max-width:1024px) {
             flex-direction: column;
+            align-items: center;
         }
     }
 
     // .section__img
     &__img {
-        width: 450px;
-        height: 300px;
-
-        @media (max-width:1024px) {
-            margin: 20px auto 0 auto;
-        }
-
-        @media (max-width:475px) {
-            width: 300px;
-            height: 200px;
-        }
+        width: 100%;
+        max-width: 450px;
+        object-fit: contain;
     }
 
     // .section__description
     &__description {
+        width: 100%;
         max-width: 450px;
         margin-top: 50px;
 
-        @media (max-width:1024px) {
-            margin: 20px auto 0 auto;
-        }
-
-        @media (max-width:475px) {
-            max-width: 310px;
+        @media (max-width:768px) {
+            margin-top: 0;
         }
     }
 
     // .section__header
     &__header {
         font-size: 20px;
-        line-height: 43px;
         font-weight: 700;
         color: $grey-900;
     }
 
     // .section__text
     &__text {
-        font-size: 14px;
-        line-height: 20px;
         color: $grey-400;
+        font-size: 14px;
+        line-height: 1.5;
 
         p {
             padding: 10px 0;
@@ -386,98 +382,54 @@
     }
 
     // .section__features
-    &__features{
-        width: 450px;
-        height: 280px;
+    &__features {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 1.5;
         color: $grey-400;
-
-        @media (max-width:475px) {
-            width: 310px;
-        }
-    }
-
-    // .section__featureHeader
-    &__featureHeader {
-        font-size: 14px;
-        line-height: 17px;
-        font-weight: 600;
-        color: $grey-900;
-        padding: 33px 0 12px 0;
-    }
-
-    // .section__featureBlock
-    &__featureBlock {
-        width: inherit;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    // .section__fa
-    &__fa {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        font-family: 'Font Awesome';
-        font-size: 16px;
-        line-height: 1.2;
-        color: $orange-400;
-        width: 40px;
-        height: 40px;
-        border: 1px solid $orange-400;
-        border-radius: 50%;
-        margin: 0 0 0 5px;
-        flex-shrink: 0;
     }
 
     // .section__feature
     &__feature {
-        width: 390px;
+
+    }
+
+    // .section__feature-header
+    &__feature-header {
+        margin: 33px 0 12px;
+        color: $grey-900;
         font-size: 14px;
-        line-height: 20px;
+        font-weight: 600;
+    }
+
+    // .section__feature-row
+    &__feature-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    // .section__feature-icon
+    &__feature-icon {
+        flex: 0 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        margin-left: 5px;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        color: $orange-400;
+        font-size: 16px;
+    }
+
+    // .section__feature-text
+    &__feature-text {
+        width: 100%;
+        max-width: 390px;
+        font-size: 14px;
+        line-height: 1.5;
         color: $grey-400;
-
-        @media (max-width:475px) {
-            width: 300px;
-            padding: 0 0 0 10px;
-        }
-    }
-}
-
-
-
-.section2 {
-    background-color: $grey-100;
-    height: 524px;
-
-    @media (max-width:1024px) {
-        height: 624px;
-    }
-
-    @media (max-width:475px) {
-        height: 584px;
-    }
-
-    // .section2__img
-    &__img {
-        display: block;
-        width: 453px;
-        height: 303px; 
-        padding: 130px 0 0 0;
-        margin-left: auto;
-
-        @media (max-width:1024px) {
-            padding: 10px 0 0 0;
-            margin: 0 auto;
-        }
-
-        @media (max-width:475px) {
-            width: 300px;
-            height: 200px;
-        }
     }
 }
 
@@ -485,6 +437,7 @@
 
 .awesome {
     height: 550px;
+    padding-top: 127px;
 
     @media (max-width:1024px) {
         height: 830px;
