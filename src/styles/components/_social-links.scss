@@ -1,0 +1,7 @@
+.social-link {
+    transition: color .3s ease;
+
+    &:hover {
+        color: $orange-400;
+    }
+}
