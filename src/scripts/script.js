@@ -1,10 +1,15 @@
 // Делаем активным меню при нажатии на бургер
-document.querySelector('.js-header-burger').addEventListener('click', () => {
+document.querySelector('.js-header-burger').addEventListener('click', toggleMobileMenu)
+
+function toggleMobileMenu() {
     document.querySelector('.js-header-burger').classList.toggle('active');
     document.querySelector('.js-header-menu').classList.toggle('active');
-})
+    document.querySelector('body').classList.toggle('body--fixed');
+}
 
 
+
+// Логика табов
 
 // Скрываем все изображения кроме первого
 let tabsImages = document.querySelectorAll('.js-tab-image');
@@ -35,23 +40,28 @@ function ChangeTab() {
 
 // Плавный скролл при нажатии на ссылку
 document.querySelectorAll('a[href^="#"').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        let href = this.getAttribute('href').substring(1);
-
-        const scrollTarget = document.getElementById(href);
-
-        const topOffset = 70; // Высота шапки
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
-        
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
+    link.addEventListener('click', smoothScroll);
 });
+
+function smoothScroll(e) {
+    e.preventDefault();
+
+    let href = this.getAttribute('href').substring(1);
+
+    const scrollTarget = document.getElementById(href);
+
+    const topOffset = 70; // Высота шапки
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+    
+    window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+    
+    console.log(1)
+    toggleMobileMenu();
+}
 
 
 
@@ -80,6 +90,8 @@ function trialFormSubmit(e) {
     .then(() => alert('Success!'))
     .catch(() => alert('Error'))
 }
+
+
 
 // Отправка данных формы в блоке Contact
 document.querySelector('.js-send-message').onclick = contactFormSubmit;
