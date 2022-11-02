@@ -1,4 +1,3 @@
-// Импорт пакетов
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const rename = require('gulp-rename')
@@ -41,7 +40,7 @@ const paths = {
 
 // Очистить каталог dist, удалить все кроме изображений
 function clear() {
-  return del(['dist/*', '!dist/img'])
+  return del(['dist/*', '!dist/images'])
 }
 
 
@@ -90,7 +89,6 @@ function scripts() {
   .pipe(ts({
     allowJs: true,
     noImplicitAny: true,
-    outFile: 'script.min.js'
   }))
   .pipe(babel({
     presets: ['@babel/env']
