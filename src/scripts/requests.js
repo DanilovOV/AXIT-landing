@@ -1,3 +1,5 @@
+export default function requests() {
+    
 const url = 'https://628e4808a339dfef87ab4f4b.mockapi.io/'
 
 // Отправка формы в блоке trial
@@ -49,4 +51,5 @@ function contactFormSubmit(e) {
     })
     .then(() => alert('Success!'))
     .catch(() => alert('Error'))
+}
 }
