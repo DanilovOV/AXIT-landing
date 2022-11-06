@@ -190,6 +190,7 @@
         color: $white;
         font-size: 15px;
         font-weight: 700;
+        user-select: none;
         cursor: pointer;
 
         &:hover {
@@ -241,9 +242,12 @@
 
     // .tabs__images
     &__images {
-        position: relative;
         align-self: center;
-        max-width: 320px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 320px;
+        height: 100%;
 
         @media (max-width:768px) {
             justify-self: center;
@@ -256,11 +260,15 @@
 
     // .tabs__image
     &__image {
+        position: absolute;
         width: 100%;
         object-fit: contain;
+        transition: opacity .3s ease;
+        pointer-events: none;
     }
 
     .activeTab {
+        
         background-color: $orange-400;
     
         &:hover {

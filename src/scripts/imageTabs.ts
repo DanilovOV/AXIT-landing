@@ -1,27 +1,21 @@
 export default function imageTabs() {
-    const tabsImages = document.querySelectorAll(".js-tab-image")
-    tabsImages?.forEach((element) => element.classList.add("hidden"))
-    tabsImages[0].classList.remove("hidden")
+    document.querySelectorAll(".js-tab")?.forEach(
+        tab => tab.addEventListener("click", changeTab));
 
-    // Навешиваем обработчики на табы
-    let tabButtons = document.querySelectorAll(".js-tab-button")
-    tabButtons?.forEach((element) => element.addEventListener("click", ChangeTab))
-    let animateOn = false
+    function changeTab(e: Event) {
+        const activeTab = <HTMLElement>document.querySelector('.activeTab');
+        if(activeTab == e.target) return;
+        
+        const thisTab = <HTMLElement>e.target;
+        const activeImage = document.querySelector(`[data-tab="${activeTab?.dataset.openTab}"]`);
+        const thisImage = document.querySelector(`[data-tab="${thisTab?.dataset.openTab}"]`);
 
-    // Меняем изображение при нажатии на таб
-    function ChangeTab() {
-        tabsImages.forEach((element) => element.classList.add("hidden"))
-        tabsImages[this.dataset.tabnum].classList.remove("hidden")
+        if (!activeTab || !thisTab || !activeImage || !thisImage) return;
 
-        tabButtons.forEach((element) => element.classList.remove("activeTab"))
-        this.classList.add("activeTab")
+        activeTab.classList.remove('activeTab');
+        activeImage.classList.add('hidden');
 
-        // Анимация добавляется здесь чтобы она не срабатывала при загрузке страницы
-        if (animateOn == false) {
-            document
-                .querySelectorAll(".js-tab-image")
-                .forEach((element) => element.classList.add("animated"))
-            animateOn = true
-        }
+        thisTab.classList.add('activeTab');
+        thisImage.classList.remove('hidden');
     }
 }
