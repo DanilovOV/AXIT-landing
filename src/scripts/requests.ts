@@ -11,7 +11,7 @@ export default function requests() {
     function trialFormSubmit(e: Event) {
         e.preventDefault()
 
-        axios.post('/user', {
+        axios.post(url + 'AXIT-trial-requests', {
             name:     (<HTMLInputElement>document.getElementById('trial-text')).value,
             email:    (<HTMLInputElement>document.getElementById('trial-email')).value,
             password: (<HTMLInputElement>document.getElementById('trial-password')).value,
@@ -31,7 +31,7 @@ export default function requests() {
     function contactFormSubmit(e:Event) {
         e.preventDefault()
 
-        axios.post('/user', {
+        axios.post(url + 'AXIT-messages', {
             name:    (<HTMLInputElement>document.getElementById('contact-name')).value,
             email:   (<HTMLInputElement>document.getElementById('contact-email')).value,
             subject: (<HTMLInputElement>document.getElementById('contact-subject')).value,
